@@ -1,0 +1,44 @@
+mysql> desc emp;
++------------+---------+------+-----+---------+-------+
+| Field      | Type    | Null | Key | Default | Extra |
++------------+---------+------+-----+---------+-------+
+| emp_id     | int     | YES  |     | NULL    |       |
+| emp_name   | char(1) | YES  |     | NULL    |       |
+| emp_dept   | char(1) | YES  |     | NULL    |       |
+| emp_salary | int     | YES  |     | NULL    |       |
+| emp_age    | int     | YES  |     | NULL    |       |
++------------+---------+------+-----+---------+-------+
+5 rows in set (0.03 sec)
+
+mysql> alter table emp add emp_position char;
+Query OK, 0 rows affected (0.12 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc emp;
++--------------+---------+------+-----+---------+-------+
+| Field        | Type    | Null | Key | Default | Extra |
++--------------+---------+------+-----+---------+-------+
+| emp_id       | int     | YES  |     | NULL    |       |
+| emp_name     | char(1) | YES  |     | NULL    |       |
+| emp_dept     | char(1) | YES  |     | NULL    |       |
+| emp_salary   | int     | YES  |     | NULL    |       |
+| emp_age      | int     | YES  |     | NULL    |       |
+| emp_position | char(1) | YES  |     | NULL    |       |
++--------------+---------+------+-----+---------+-------+
+6 rows in set (0.08 sec)
+
+mysql> alter table emp drop emp_age;
+Query OK, 0 rows affected (0.18 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc emp;
++--------------+---------+------+-----+---------+-------+
+| Field        | Type    | Null | Key | Default | Extra |
++--------------+---------+------+-----+---------+-------+
+| emp_id       | int     | YES  |     | NULL    |       |
+| emp_name     | char(1) | YES  |     | NULL    |       |
+| emp_dept     | char(1) | YES  |     | NULL    |       |
+| emp_salary   | int     | YES  |     | NULL    |       |
+| emp_position | char(1) | YES  |     | NULL    |       |
++--------------+---------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
